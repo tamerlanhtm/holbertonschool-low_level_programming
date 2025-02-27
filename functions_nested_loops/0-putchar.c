@@ -1,13 +1,22 @@
 #include "main.h"
 
 /**
- * main.c - writes the character c to stdout
- * @c: The character to print
+ * main - Prints "Holberton" followed by a new line.
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: Always 0.
  */
 int main(void)
-{ 
+{
+	_putchar('H');
+	_putchar('o');
+	_putchar('l');
+	_putchar('b');
+	_putchar('e');
+	_putchar('r');
+	_putchar('t');
+	_putchar('o');
+	_putchar('n');
+	_putchar('\n');
+
 	return (0);
 }
