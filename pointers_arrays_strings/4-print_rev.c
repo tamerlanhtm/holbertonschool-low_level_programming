@@ -18,7 +18,7 @@ void print_rev(char *s)
 	_putchar('\n');
 }
 
-// Example usage
+
 int main()
 {
     char str[] = "Holberton!";
