@@ -8,27 +8,33 @@
  *
  * Return: A pointer to the resulting string @dest.
  */
-char *_strcat(char *dest, char *src)
-{
-    int dest_len = 0, i = 0;
-
-    // Find the length of dest
-    while (dest[dest_len] != '\0')
-    {
-        dest_len++;
+char *_strcat(char *dest, char *src) {
+    char *ptr = dest;
+    
+    // Move the pointer to the end of dest
+    while (*ptr != '\0') {
+        ptr++;
     }
-
-    // Append src to the end of dest
-    while (src[i] != '\0')
-    {
-        dest[dest_len] = src[i];
-        dest_len++;
-        i++;
+    
+    // Append src to dest
+    while (*src != '\0') {
+        *ptr = *src;
+        ptr++;
+        src++;
     }
-
-    // Add the null terminator
-    dest[dest_len] = '\0';
-
+    
+    // Add null terminator
+    *ptr = '\0';
+    
     return dest;
 }
 
+int main() {
+    char str1[100] = "Hello, ";  // Ensure str1 has enough space
+    char str2[] = "World!";
+    
+    _strcat(str1, str2);
+    printf("%s\n", str1);
+    
+    return 0;
+}
