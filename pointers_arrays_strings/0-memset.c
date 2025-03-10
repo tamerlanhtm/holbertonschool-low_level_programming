@@ -10,24 +10,12 @@
  *
  * Return: A pointer to the filled memory area @s.
  */
-char *_memset(char *s, char b, unsigned int n) {
+char *_memset(char *s, char b, unsigned int n)
+{
     unsigned int i;
-    for (i = 0; i < n; i++) {
+    for (i = 0; i < n; i++)
+    {
         s[i] = b;
     }
     return s;
-}
-
-int main() {
-    char buffer[10];
-    unsigned int i;
-
-    _memset(buffer, 'A', sizeof(buffer));
-
-    for (i = 0; i < 10; i++) {  
-        printf("%c ", buffer[i]);
-    }
-    printf("\n"); 
-
-    return 0;
 }
