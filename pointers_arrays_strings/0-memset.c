@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -19,12 +20,14 @@ char *_memset(char *s, char b, unsigned int n) {
 
 int main() {
     char buffer[10];
-    
+    unsigned int i;  // Declare 'i' before the loop (C89 compatibility)
+
     _memset(buffer, 'A', sizeof(buffer));
 
-    for (int i = 0; i < 10; i++) {
+    for (i = 0; i < 10; i++) {  // Use 'i' declared outside
         printf("%c ", buffer[i]);
     }
-    
+    printf("\n");  // Ensure the output ends with a newline
+
     return 0;
 }
